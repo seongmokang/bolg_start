@@ -161,23 +161,43 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <h2 class="page-title">Users</h2>
                 <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
+            
               </paper-material>
             </section>
 
             <section data-route="user-info">
               <paper-material elevation="1">
                 <h2 class="page-title">User: {{params.name}}</h2>
-                <div>This is {{params.name}}'s section</div>
+                
+
+
+
+
+         <body>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+
+</body>
+
+
+
+
+
+
+
               </paper-material>
             </section>
+
             <section data-route="resume">
               <paper-material elevation="1">
-                <u><h2 class="page-title">Seongmo Kang</h2></u>
-                <p>Contact : 082)01029057915 | sungmo1992@gmail.com</p>
+
+                <h2 class="page-title">Seongmo Kang</h2>
+                <div style="text-align:right">Contact : 082)01029057915 | sungmo1992@gmail.com<a href="https://my.indeed.com/r/SEONGMO-KANG/9ee6fcc857275e4b?subfrom=t">|Linkedin</a></div>
+                <hr size = "3">
                 <p>
                 <font size="4">
                   <b><u>Objective</u></b>
@@ -190,13 +210,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <b><u>Summary</u></b>
                 </font>
                 </p>
-                <p>- A lot of experience in C programming development.</p>
-                <p>- Strong background in signal, image and video processing.</p>
-                <p>- Strong understanding of image processing algorithms and camera image signal processing chain.</p>
-                <p>- Excellent communication, interpersonal and problem solving skill.</p>
-                <p>- In depth understanding of Java design patterns like Data Access Object, MVC and Singleton.*</p>
-                <p>- Experience designing embedded systems and knowledge of various communication protocols (I2C, SPI, UART)*</p>
-                <p>- Experience with schematic capture and PCB layout*</p>
+                <p>- A lot of experience in C programming development.<br><br>
+                - Strong background in signal, image and video processing.<br><br>
+                - Strong understanding of image processing algorithms and camera image signal processing chain.<br><br>
+                - Excellent communication, interpersonal and problem solving skill.<br><br>
+                - In depth understanding of Java design patterns like Data Access Object, MVC and Singleton.*<br><br>
+                - Experience designing embedded systems and knowledge of various communication protocols (I2C, SPI, UART)*<br><br>
+                - Experience with schematic capture and PCB layout*</p>
 
                 <p>
                 <font size="4">
@@ -213,15 +233,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <b><u>Work Experience</u></b>
                   </font>
                 </p>
-                <p>- Internship</p>
-                <p>Ziontech Inc. (January 2016 - now)</p>
-
-                <p>- Sound filter design.</p>
-                <p>Kookmin Univ. (November 2015 – December)</p>
+                <p>ㅁ Internship (January 2016 - now)<br>
+                <font size="3">- Ziontech Inc.
+                </font>
+              </p>
+                <p>ㅁ Sound filter design.(November 2015 – December)
+                <br>- Kookmin Univ. </p>
                 <p>- Designing filter in order to remove MR sounds with using Matlab.</p>
 
-                <p>- Auto car number search.</p>
-                <p>Kookmin Univ. (October 2015 – November)</p>
+                <p>ㅁ Auto car number search.(October 2015 – November)
+                <br align="right">- Kookmin Univ. </p>
                 <p>- Analyzing Car number board program using Raspberry Pi, Pi_Cam, Linux, OpenCV</p>
                 <p>- Getting Popularity Award in Capstone Design Contest.</p>
 
@@ -238,13 +259,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <b><u>Army</u></b>
                   </font>
                 </p>
-                <p>Signal Corpsman (March 2012 – December 2013)</p>
-                <p>Repubilc of Korea KangWondo</p>
+                <p>Signal Corpsman (March 2012 – December 2013)
+                <br>Repubilc of Korea KangWondo</p>
                 <p>- Signal Support Systems Specialist.</p>
                 <p>- Human Resources Specialist.</p>
 
 
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
+                <a href$="{{baseUrl}}users/resume">resume file</a><br>
               </paper-material>
             </section>
 
