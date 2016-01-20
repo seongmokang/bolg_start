@@ -16,7 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
-  <title>Polymer Starter Kit</title>
+  <title>Momo's Blog</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -84,10 +84,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Users</span>
           </a>
 
+          <a data-route="resume" href="{{baseUrl}}resume">
+            <iron-icon icon="pan-tool"></iron-icon>
+            <span>Resume</span>
+          </a>
+
           <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
+
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -105,12 +111,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">Momo's Blog</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">Welcome to my blog</div>
           </div>
         </paper-toolbar>
 
@@ -168,13 +174,90 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <div>This is {{params.name}}'s section</div>
               </paper-material>
             </section>
+            <section data-route="resume">
+              <paper-material elevation="1">
+                <h2 class="page-title">Resume</h2>  
+                <p>
+                <font size="4">
+                  <u>Objective</u>
+                </font>
+                </p>
+                <p>I am looking to join an Image Processing Software Engineer. I am self-motivated, self-start person and I have strong commitment to task. I adapt well in the fast-paced collaborative environment. I am a team-oriented, self-driven person with a keen technical mind and an eye for detail.</p>
+
+                <p>
+                <font size="4">
+                  <u>Summary</u>
+                </font>
+                </p>
+                <p>- A lot of experience in C programming development.</p>
+                <p>- Strong background in signal, image and video processing.</p>
+                <p>- Strong understanding of image processing algorithms and camera image signal processing chain.</p>
+                <p>- Excellent communication, interpersonal and problem solving skill.</p>
+                <p>- In depth understanding of Java design patterns like Data Access Object, MVC and Singleton.*</p>
+                <p>- Experience designing embedded systems and knowledge of various communication protocols (I2C, SPI, UART)*</p>
+                <p>- Experience with schematic capture and PCB layout*</p>
+
+                <p>
+                <font size="4">
+                  <u>Technical Skills</u>
+                </font>
+                </p>
+                <p>- Languages/App Development : Matlab , Java , C , C++* , Python* ,( Numpy*, Scipy*)</p>
+                <p>- Tools : Visual Studio, OpenCV , Eclipse , XCode , OPENCL* , CUDA*</p>
+                <p>- Hardware : Raspberry Pi, Pi_Cam, Arduino*</p>
+                <p>- Others : Proficient in MS Office software(Word, Excel, Power Point)</p>
+
+                <p>
+                  <font size="4">
+                    <u>Work Experience</u>
+                  </font>
+                </p>
+                <p>- Internship</p>
+                <p>Ziontech Inc. (January 2016 - now)</p>
+
+                <p>- Sound filter design.</p>
+                <p>Kookmin Univ. (November 2015 – December)</p>
+                <p>- Designing filter in order to remove MR sounds with using Matlab.</p>
+
+                <p>- Auto car number search.</p>
+                <p>Kookmin Univ. (October 2015 – November)</p>
+                <p>- Analyzing Car number board program using Raspberry Pi, Pi_Cam, Linux, OpenCV</p>
+                <p>- Getting Popularity Award in Capstone Design Contest.</p>
+
+                <p>
+                  <font size="4">
+                    <u>Education</u>
+                  </font>
+                </p>
+                <p>Kookmin University (2011-2017)</p>
+                <p>Bachelor of Electronical Engineering</p>
+
+                <p>
+                  <font size="4">
+                    <u>Army</u>
+                  </font>
+                </p>
+                <p>Signal Corpsman (March 2012 – December 2013)</p>
+                <p>Repubilc of Korea KangWondo</p>
+                <p>- Signal Support Systems Specialist.</p>
+                <p>- Human Resources Specialist.</p>
+
+
+                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
+              </paper-material>
+            </section>
 
             <section data-route="contact">
               <paper-material elevation="1">
                 <h2 class="page-title">Contact</h2>
                 <p>This is the contact section</p>
+                
+                <p>This is the contact section</p>
+
+                <p>This is the contact section</p>
               </paper-material>
             </section>
+
           </iron-pages>
         </div>
       </paper-scroll-header-panel>
