@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+.background {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+#left {
+    width: 100px;
+    height: 100%;
+    flex:none;
+    background-color: blue;
+    color:white;
+    background:blue;
+}
+#center {
+    min-width: 100px;
+    height:100%;
+    flex: 1;
+    background-color: white;
+    color:black;
+    background: white;
+}
+#right{
+    width: 200px;
+    height: 100%;
+    flex:none;
+    background-color: red;
+    color:white;
+    background: red;
+}
+
+div.left:hover{
+  background:red;
+}
+div.right:hover{
+  background: blue;
+}
+div.center:hover{
+  background: black;
+}
+
+</style>
+
+<body>
+  <div class="background">
+    <div id="left" style="background:blue">blue
+    </div>
+    <div id="center" style="background:white">white
+    </div>
+    <div id="right" style="background:red">red
+    </div>
+  </div>
+</body>
+
+<script>
+  var color1 = document.getElementById("left");
+  var color2 = document.getElementById("center");
+  var color3 = document.getElementById("right");
+
+  color1.addEventListener("click",changeleft);// 버튼 이벤트 형성
+
+  color3.addEventListener("click",changeright);
+
+function changeleft() {
+  var leftcolor = document.getElementById("left").style.backgroundColor;
+  var centercolor = document.getElementById("center").style.backgroundColor;
+  var rightcolor = document.getElementById("right").style.backgroundColor;//각 영역의 컬러를 불러온다.
+
+  color1.style.backgroundColor= centercolor;
+  color2.style.backgroundColor= rightcolor;
+  color3.style.backgroundColor= leftcolor;//서로 바꿔준다.
+}
+
+function changeright() {
+  var leftcolor = document.getElementById("left").style.backgroundColor;
+  var centercolor = document.getElementById("center").style.backgroundColor;
+  var rightcolor = document.getElementById("right").style.backgroundColor;//각 영역의 컬러를 불러온다.
+  
+  color1.style.backgroundColor= rightcolor;
+  color2.style.backgroundColor= leftcolor;
+  color3.style.backgroundColor= centercolor;//서로 바꿔준다.
+}
+</script>
+</head>
+</html>

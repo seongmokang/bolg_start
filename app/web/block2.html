@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+.background {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.left {
+    width: 100px;
+    height: 100%;
+    flex:none;
+    background-color: blue;
+    color:white;
+}
+.center {
+    min-width: 100px;
+    height:100%;
+    flex: 1;
+    background-color: white;
+    color:black;
+}
+.right{
+    width: 200px;
+    height: 100%;
+    flex:none;
+    background-color: red;
+    color:white;
+}
+
+div.left:hover{
+  background-color:red;
+}
+div.right:hover{
+  background-color: blue;
+}
+div.center:hover{
+  background-color: black;
+}
+</style>
+
+<body>
+  <div class="background">
+    <div class="left" id="left" onclick="javascript: changeleft();" style="background:blue">blue
+    </div>
+    <div class="center" id="center" style="background:white">white
+    </div>
+    <div class="right" id="right" onclick="javascript: changeright();" style="background:red">red
+    </div>
+  </div>
+</body>
+
+<script>
+function changeleft () {
+  var color1 = document.getElementById("left");
+  var color2 = document.getElementById("center");
+  var color3 = document.getElementById("right");
+
+  var back_color1 = document.getElementById("left").style.backgroundColor;
+  var back_color2 = document.getElementById("center").style.backgroundColor;
+  var back_color3 = document.getElementById("right").style.backgroundColor;
+
+  color1.style.backgroundColor= back_color2;
+  color2.style.backgroundColor= back_color3;
+  color3.style.backgroundColor= back_color1;
+
+}
+
+function changeright () {
+  var color1 = document.getElementById("left");
+  var color2 = document.getElementById("center");
+  var color3 = document.getElementById("right");//각 영역을 정의 한다.
+
+  var back_color1 = document.getElementById("left").style.backgroundColor;
+  var back_color2 = document.getElementById("center").style.backgroundColor;
+  var back_color3 = document.getElementById("right").style.backgroundColor;//각 영역의 컬러를 불러온다.
+  
+  color1.style.backgroundColor= back_color3;
+  color2.style.backgroundColor= back_color1;
+  color3.style.backgroundColor= back_color2;//서로 바꿔준다.
+}
+</script>
+</head>
+</html>

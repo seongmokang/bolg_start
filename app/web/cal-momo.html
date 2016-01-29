@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jquery-1.12.0.min.js"></script>
+<style>
+.wrap{
+    height: 200%;
+    top: 0px;
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+.month{
+	text-align: center;
+	margin: 10px 0 10px 0;
+}
+#calendar{
+	border-collapse: collapse;
+	text-align: center;
+}
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 13%;
+    height: 15%;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */s
+    transition: width 2s, height 2s, transform 2s;
+}	
+
+div.img:hover {
+    border: 1px solid #777;
+    width: 13%;
+    height: 15%;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+div.img img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 5px;
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+	<div class='wrap' >
+		
+		<!--butten & date-->
+		<div class='month'>
+			<button id='pre_button'>&lt;</button>
+			<span id='year_month'></span>
+			<button id='next_button'>&gt;</button>
+		</div>
+<!--1week-->
+		<div class="img">
+			<div class="desc">1</div>
+		  <a target="_blank" href="img_fjords.jpg">
+		    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+		  </a>
+		  
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_forest.jpg">
+		    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+		  </a>
+		  <div class="desc">2</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_lights.jpg">
+		    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+		  </a>
+		  <div class="desc">3</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">4</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">5</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">6</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">7</div>
+		</div>
+<!--2week-->
+		<div class="img">
+		  <a target="_blank" href="img_fjords.jpg">
+		    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+		  </a>
+		  <div class="desc">1</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_forest.jpg">
+		    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+		  </a>
+		  <div class="desc">2</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_lights.jpg">
+		    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+		  </a>
+		  <div class="desc">3</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">4</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">5</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">6</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">7</div>
+		</div>
+<!--3week-->
+		<div class="img">
+		  <a target="_blank" href="img_fjords.jpg">
+		    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+		  </a>
+		  <div class="desc">1</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_forest.jpg">
+		    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+		  </a>
+		  <div class="desc">2</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_lights.jpg">
+		    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+		  </a>
+		  <div class="desc">3</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">4</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">5</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">6</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">7</div>
+		</div>
+<!--4week-->
+		<div class="img">
+		  <a target="_blank" href="img_fjords.jpg">
+		    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+		  </a>
+		  <div class="desc">1</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_forest.jpg">
+		    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+		  </a>
+		  <div class="desc">2</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_lights.jpg">
+		    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+		  </a>
+		  <div class="desc">3</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">4</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">5</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">6</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">7</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_fjords.jpg">
+		    <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+		  </a>
+		  <div class="desc">1</div>
+		</div>
+<!--5week-->
+		<div class="img">
+		  <a target="_blank" href="img_forest.jpg">
+		    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+		  </a>
+		  <div class="desc">2</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_lights.jpg">
+		    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+		  </a>
+		  <div class="desc">3</div>
+		</div>
+
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">4</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">5</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">6</div>
+		</div>
+		<div class="img">
+		  <a target="_blank" href="img_mountains.jpg">
+		    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+		  </a>
+		  <div class="desc">7</div>
+		</div>
+		<!-- calender -->
+		<div id="calendar"></div>
+	</div>
+
+</body>
+
+<script>
+var calendar = new myFunction();
+//calendar.init();
+
+function myFunction() {
+    var d = new Date();
+    d.setDate(1);
+    document.getElementById("year_month").innerHTML = d;
+}
+
+	$(document).ready(function(){
+	$('.wrap').css('width' ,  $(window).width()-100);
+    $('.wrap').css('height' ,  $(window).height()-100);
+    $(window).resize(function() {
+    $('.wrap').css('width' ,  $(window).width()-100);
+    $('.wrap').css('height' ,  $(window).height()-100);
+    });
+});  
+
+
+
+</script>
+
+</html>

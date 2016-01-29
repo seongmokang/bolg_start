@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+<style >
+
+.col {
+    
+     display: -webkit-flex;
+	 display: flex;
+	 height:100%;
+}
+
+.col-1 {
+  float: left;
+  min-width: 100px;
+    width: 100px;
+
+     height:100%;
+}
+
+.col-2 {
+
+	float: left;
+	flex: 1;
+	min-width: 100px;
+    height:100%;
+    
+}
+
+.col-3 {
+    width: 200px;
+    min-width: 100px;
+
+    height:100%;
+}
+div.col-1:hover{
+  background-color:red;
+}
+div.col-2:hover{
+  background-color: blue;
+}
+div.col-3:hover{
+  background-color: black;
+}
+</style>
+
+<script>
+
+    function changeleft() {
+     var element1 = document.getElementById("col-1");
+     var element2 = document.getElementById("col-2");
+     var element3 = document.getElementById("col-3");
+     var co1 = document.getElementById("col-1").style.backgroundColor;
+     var co2 = document.getElementById("col-2").style.backgroundColor;
+     var co3 = document.getElementById("col-3").style.backgroundColor;
+      element1.style.backgroundColor= co2;
+      element2.style.backgroundColor= co3;
+       element3.style.backgroundColor= co1;
+
+    }
+
+    function changeright() {
+     var element1 = document.getElementById("col-1");
+     var element2 = document.getElementById("col-2");
+     var element3 = document.getElementById("col-3");
+
+     var co1 = document.getElementById("col-1").style.backgroundColor;
+     var co2 = document.getElementById("col-2").style.backgroundColor;
+     var co3 = document.getElementById("col-3").style.backgroundColor;
+
+      element1.style.backgroundColor= co3;
+      element2.style.backgroundColor= co1;
+       element3.style.backgroundColor= co2;
+    }
+
+</script>
+
+</head>
+<body>
+	<div class="col">
+      <div  onclick="changeleft();"class="col-1" id="col-1" style="background:red">첫번째 단</div>
+      <div  class="col-2" id="col-2" style="background:yellow">2번째 단</div>
+      <div onclick="changeright();" class="col-3" id="col-3" style="background:blue">3번째 단</div>
+    </div>
+</body>
+</html>

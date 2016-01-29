@@ -1,0 +1,106 @@
+<html>
+<div class="wrapper">
+  <aside class="item left"></aside>
+  <div class="item center"></div>
+  <aside class="item right"></aside>
+</div>
+
+<script>
+// Color Set
+var colors = ['#FF4444', '#FFBB33', '#99CC00'];
+// Elements
+var elements = document.getElementsByClassName("item");
+
+// Functions
+// Drawing color on column elements
+function drawColor() {
+  for (var i = 0, len = elements.length; i < len; i++) {
+    elements[i].style.backgroundColor = colors[i];
+  }
+}
+
+// Function - Clicked on each elements
+function clickedColumn(e) {
+  ele_wrapper.className += ' load';
+  console.log('before colors data : ', colors);
+  // Move left 
+  if (e.target.classList.contains('left')) {
+    var shifter = colors[0];
+    colors.shift();
+    colors.push(shifter);
+  } else if (e.target.classList.contains('center')) {} 
+  // Move Right
+  else if(e.target.classList.contains('right')) {
+    var shifter = colors[colors.length - 1];//unshift 는 오른쪽으로
+    colors.unshift(shifter);
+    colors.splice(colors.length - 1, 1);//length 는 하나가 늘어났다. 그래서 하나 뺀거로 배열을 찾는다. 1은 지운다는뜻
+  }
+  console.log('after colors data : ', colors);
+  drawColor();
+}
+
+var ele_wrapper = document.getElementsByClassName("wrapper")[0];
+// Event Controller
+ele_wrapper.addEventListener("click", clickedColumn);
+
+// Initial drawing
+drawColor();
+//wrapper 전체에 배열로 준다
+
+</script>
+
+</html>
+<style>
+.wrapper {
+  position: absolute;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper > * {
+  border: 1px solid #e7e7e7;
+  transition: all 0.1s;
+}
+
+.wrapper > aside.left {
+  -webkit-box-flex: none;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: none;
+  /* OLD - Firefox 19- */
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  width: 100px;
+}
+
+.wrapper > div.center {
+  width: 100%;
+  min-width: 100px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.wrapper > aside.right {
+  -webkit-box-flex: none;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: none;
+  /* OLD - Firefox 19- */
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  width: 200px;
+}
+
+.wrapper > *:hover {
+  opacity: 0.8;
+  box-shadow: inset 0 0 5px #fff;
+  cursor: pointer;
+}
+</style>
